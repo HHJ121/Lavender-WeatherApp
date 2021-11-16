@@ -1,10 +1,22 @@
 div.container {
   font-family: monospace;
+  color: #3d0657;
 }
 
-div#background img {
-  position: absolute;
-  min-width: 850px;
+img.lavender {
+  min-width: 500px;
+  max-height: 500px;
   width: 50%;
   opacity: 0.3;
+  position: fixed;
+  left: 325px;
+  top: 25px;
+  border: 2px solid #430f58;
+  border-radius: 20px;
+}
+
+div .weather-app {
+  border: 1px solid #430f58;
+  max-width: 600px;
+  margin: 30px auto;
 }
