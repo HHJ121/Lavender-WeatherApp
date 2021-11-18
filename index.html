@@ -21,8 +21,6 @@
   <body>
     <div class="container">
       <div class="app-wrapper">
-        
-      <img src="image/lavender.jpg" alt="lavender field" class="lavender" />
       
       <div class="weather-app">
         <form id="search-form">
@@ -30,7 +28,7 @@
               <div class="col-8">
                 <input
                   type="search"
-                  placeholder="Type a city..."
+                  placeholder="Enter a city..."
                   id="city-input"
                   autocomplete="off"
                   autofocus="on"
@@ -46,7 +44,7 @@
         </form>
         <div id="overviewWeather">
            <h1 id="cityName">Taipei city</h1>
-           <ul>
+           <ul class="weather-condition">
              <li>
                Last updated at: <span id="date">Monday 19:17</span>, <span id="description">Clear</span>
              </li>
@@ -58,7 +56,7 @@
              </li>
            </ul>
       </div>
-      <div id="weather-temp">
+      <div id="weather-temp" class="current-temp">
         <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" id="weather-icon" />
         <span class="temperature">
           <strong id="temp">17</strong>

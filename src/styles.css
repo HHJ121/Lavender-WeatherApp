@@ -1,22 +1,74 @@
 div.container {
   font-family: monospace;
-  color: #3d0657;
-}
-
-img.lavender {
-  min-width: 500px;
-  max-height: 500px;
-  width: 50%;
-  opacity: 0.3;
-  position: fixed;
-  left: 325px;
-  top: 25px;
-  border: 2px solid #430f58;
-  border-radius: 20px;
+  color: #32085a;
 }
 
 div .weather-app {
-  border: 1px solid #430f58;
+  border: 2px solid #561e8a;
+  border-radius: 30px;
+  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+
   max-width: 600px;
   margin: 30px auto;
+  padding: 20px;
+}
+
+input.btn-primary {
+  background: #561e8a;
+  border: 2px solid #561e8a;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+input.btn-primary:hover {
+  background: #7f369c;
+  border: 2px solid #561e8a;
+}
+
+h1 {
+  padding: 5px;
+}
+
+ul.weather-condition {
+  list-style: none;
+  padding-left: 10px;
+}
+
+div.current-temp {
+  padding-left: 30px;
+}
+
+span.temperature strong {
+  font-size: 42px;
+  position: relative;
+  top: 9px;
+}
+
+div.current-temp img {
+  max-width: 100px;
+}
+
+span.units {
+  position: relative;
+  bottom: 9px;
+}
+
+span.units a {
+  text-decoration: none;
+}
+
+div.coder a {
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+div.coder a:hover {
+  color: #8d3fa0;
+}
+
+.coder {
+  text-align: center;
+  font-size: 13px;
+  position: relative;
+  bottom: 30px;
 }
