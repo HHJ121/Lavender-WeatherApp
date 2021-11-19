@@ -21,7 +21,7 @@ input.btn-primary {
 }
 
 input.btn-primary:hover {
-  background: #7f369c;
+  background: #9655af;
   border: 2px solid #561e8a;
 }
 
@@ -39,7 +39,7 @@ div.current-temp {
 }
 
 span.temperature strong {
-  font-size: 42px;
+  font-size: 45px;
   position: relative;
   top: 9px;
 }
@@ -50,7 +50,8 @@ div.current-temp img {
 
 span.units {
   position: relative;
-  bottom: 9px;
+  left: 162px;
+  bottom: 75px;
 }
 
 span.units a {
@@ -63,7 +64,15 @@ div.coder a {
 }
 
 div.coder a:hover {
-  color: #8d3fa0;
+  color: #9655af;
+}
+
+#date,
+#description,
+#humidity,
+#wind-speed {
+  color: #32085a;
+  opacity: 0.6;
 }
 
 .coder {

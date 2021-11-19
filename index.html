@@ -11,10 +11,6 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script
-      src="https://kit.fontawesome.com/18fedba7e8.js"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
@@ -43,26 +39,34 @@
             </div>
         </form>
         <div id="overviewWeather">
-           <h1 id="cityName">Taipei city</h1>
+           <h1 id="cityName"></h1>
            <ul class="weather-condition">
              <li>
-               Last updated at: <span id="date">Monday 19:17</span>, <span id="description">Clear</span>
+               Last updated at: <span id="date"></span>, <span id="description"></span>
              </li>
              <li>
-               Humidity:<span id="humidity">80</span>%
+               Humidity: <span id="humidity"></span> %
              </li>
              <li>
-               Wind:<span id="wind-speed">7</span>Km/h
+               Wind: <span id="wind-speed"></span> KMPH
              </li>
            </ul>
       </div>
       <div id="weather-temp" class="current-temp">
-        <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" id="weather-icon" />
-        <span class="temperature">
-          <strong id="temp">17</strong>
+        <img src="" alt="" id="weather-icon" />
+        <span class="temperature" class="float-left">
+          <strong id="temp"></strong>
             <span class="units">
-                    <a href="#" id="celsius" class="active">°C</a> |
-                    <a href="#" id="fahrenheit">°F</a>
+              <div class="row">
+                 <div class="col-1">
+                    <a href="#" id="celsius" class="active">°C</a> 
+                 </div>
+              </div>
+              <div class="row">
+                <div class="col-1">
+                   <a href="#" id="fahrenheit">°F</a> 
+                </div>
+              </div>
             </span>
         </span>
       </div>
