@@ -34,7 +34,7 @@ ul.weather-condition {
 }
 
 div.current-temp {
-  padding-left: 30px;
+  padding-left: 200px;
 }
 
 span.temperature strong {
@@ -55,6 +55,18 @@ span.units {
 
 span.units a {
   text-decoration: none;
+}
+
+.forecast-date {
+  font-size: 18px;
+}
+
+.forecast-temp {
+  font-size: 17px;
+}
+
+.forecast-min-temp {
+  opacity: 0.7;
 }
 
 div.coder a {
