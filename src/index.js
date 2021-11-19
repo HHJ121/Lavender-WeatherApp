@@ -32,6 +32,7 @@ function displayTemperature(response) {
   let currentDate = document.querySelector("#date");
   let cityName = document.querySelector("#cityName");
 
+  celsiusTemp = response.data.main.temp;
   cityName.innerHTML = response.data.name;
   currentTemp.innerHTML = Math.round(response.data.main.temp);
   description.innerHTML = response.data.weather[0].description;
@@ -57,7 +58,32 @@ function cityInput(event) {
   search(cityName.value);
 }
 
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temp");
+  celsiusClick.classList.remove("active");
+  fahrenheitClick.classList.add("active");
+  let fahrenheitTemp = Math.round((celsiusTemp * 9) / 5 + 32);
+  temperature.innerHTML = fahrenheitTemp;
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temp");
+  celsiusClick.classList.add("active");
+  fahrenheitClick.classList.remove("active");
+  temperature.innerHTML = Math.round(celsiusTemp);
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", cityInput);
+
+let celsiusTemp = null;
+
+let fahrenheitClick = document.querySelector("#fahrenheit");
+fahrenheitClick.addEventListener("click", showFahrenheit);
+
+let celsiusClick = document.querySelector("#celsius");
+celsiusClick.addEventListener("click", showCelsius);
 
 search("Marseille");

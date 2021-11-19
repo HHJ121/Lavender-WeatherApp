@@ -75,6 +75,11 @@ div.coder a:hover {
   opacity: 0.6;
 }
 
+.units .active {
+  color: #32085a;
+  cursor: defalut;
+}
+
 .coder {
   text-align: center;
   font-size: 13px;
