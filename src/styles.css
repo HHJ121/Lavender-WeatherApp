@@ -47,15 +47,12 @@ div.current-temp img {
   max-width: 100px;
 }
 
-span.units {
+span.unit {
   position: relative;
   left: 162px;
   bottom: 75px;
 }
 
-span.units a {
-  text-decoration: none;
-}
 
 .forecast-date {
   font-size: 18px;
@@ -86,10 +83,7 @@ div.coder a:hover {
   opacity: 0.6;
 }
 
-.units .active {
-  color: #32085a;
-  cursor: defalut;
-}
+
 
 .coder {
   text-align: center;
