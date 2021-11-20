@@ -1,4 +1,4 @@
-function formatCurrentDate(time) {
+function setCurrentDate(time) {
   let currentDate = new Date(time);
   let hours = currentDate.getHours();
   if (hours < 10) {
@@ -24,7 +24,7 @@ function formatCurrentDate(time) {
 }
 
 function setDay(time) {
-  let setDate = new Date(time * 1000);
+  let setDate = new Date(time);
   let day = setDate.getDay();
   let days = [
     "Sunday",
@@ -40,27 +40,29 @@ function setDay(time) {
 }
 
 function showForecast(response) {
-  let forecasts = response.data.daily;
+  let dailyForecast = response.data.daily;
 
   let weatherForecast = document.querySelector("#forecast");
 
   let weatherForecastHTML = `<div class="row">`;
 
-  forecasts.forEach(function (forecastDay, index) {
-    if (index < 5) {
+  dailyForecast.forEach(function (dayForecast, index) {
+    if (index < 6) {
       weatherForecastHTML =
         weatherForecastHTML +
-        ` <div class="col-2">
-                <div class="forecast-date">${setDay(forecastDay.dt)}</div>
+        ` <div class="col-2 forecast-weekday">
+                <div class="forecast-date">${setDay(
+                  dayForecast.dt * 1000
+                )}</div>
                   <img src="http://openweathermap.org/img/wn/${
-                    forecastDay.weather[0].icon
+                    dayForecast.weather[0].icon
                   }@2x.png" alt="" width="70" />
                
                 <div class="forecast-temp" id="forecast-temperature">
                   <span class="forecast-max-temp"><strong id="max-temp">${Math.round(
-                    forecastDay.temp.max
+                    dayForecast.temp.max
                   )}˚</strong></span>/<span class="forecast-min-temp">${Math.round(
-          forecastDay.temp.min
+          dayForecast.temp.min
         )}˚</span>
 
               </div> 
@@ -98,7 +100,7 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   tempIcon.setAttribute("alt", `response.data.weather[0].description`);
-  currentDate.innerHTML = formatCurrentDate(response.data.dt * 1000);
+  currentDate.innerHTML = setCurrentDate(response.data.dt * 1000);
 
   getDailyForecast(response.data.coord);
 }

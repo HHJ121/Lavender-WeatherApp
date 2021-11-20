@@ -7,9 +7,13 @@ div .weather-app {
   border: 2px solid #561e8a;
   border-radius: 30px;
   background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
-  max-width: 650px;
+  max-width: 630px;
   margin: 30px auto;
   padding: 20px;
+}
+
+form {
+  padding-left: 30px;
 }
 
 input.btn-primary {
@@ -26,6 +30,7 @@ input.btn-primary:hover {
 
 h1 {
   padding: 5px;
+  font-size: 35px;
 }
 
 ul.weather-condition {
@@ -51,8 +56,20 @@ span.unit {
   position: relative;
   left: 162px;
   bottom: 75px;
+  font-size: 25px;
 }
 
+.forecast-weekday {
+  padding-bottom: 10px;
+}
+
+.forecast-weekday:hover {
+  color: #622dc5;
+}
+
+.weather-forecast {
+  text-align: center;
+}
 
 .forecast-date {
   font-size: 18px;
@@ -82,8 +99,6 @@ div.coder a:hover {
   color: #32085a;
   opacity: 0.6;
 }
-
-
 
 .coder {
   text-align: center;
