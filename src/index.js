@@ -23,6 +23,29 @@ function formatCurrentDate(time) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function showForecast() {
+  let weatherForecast = document.querySelector("#forecast");
+
+  let weatherForecastHTML = `<div class="row">`;
+  let days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"];
+  days.forEach(function (day) {
+    weatherForecastHTML =
+      weatherForecastHTML +
+      ` <div class="col-2">
+                <div class="forecast-date">${day}</div>
+                  <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" width="70" />
+               
+                <div class="forecast-temp" id="forecast-temperature">
+                  <span class="forecast-max-temp"><strong id="max-temp">17˚</strong></span>/<span class="forecast-min-temp"> 7˚</span>
+
+              </div> 
+            </div>`;
+  });
+
+  weatherForecastHTML = weatherForecastHTML + `</div>`;
+  weatherForecast.innerHTML = weatherForecastHTML;
+}
+
 function displayTemperature(response) {
   let currentTemp = document.querySelector("#temp");
   let description = document.querySelector("#description");
@@ -87,3 +110,4 @@ let celsiusClick = document.querySelector("#celsius");
 celsiusClick.addEventListener("click", showCelsius);
 
 search("Marseille");
+showForecast();
