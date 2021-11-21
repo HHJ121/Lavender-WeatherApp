@@ -4,6 +4,11 @@ function setCurrentDate(time) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
+
+  if (hours > 12) {
+    document.getElementById("lavender").src = "image/pink lavender.jpg";
+  }
+
   let minutes = currentDate.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;

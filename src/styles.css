@@ -8,8 +8,18 @@ div .weather-app {
   border-radius: 30px;
   background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
   max-width: 630px;
+  max-height: 605px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 20px 20px 0px;
+}
+
+img#lavender {
+  width: 98%;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  opacity: 0.4;
+  display: block;
+  margin: 0 auto;
 }
 
 form {
@@ -40,31 +50,32 @@ ul.weather-condition {
 
 div.current-temp {
   padding-left: 200px;
+  position: relative;
+  bottom: 45px;
 }
 
 span.temperature strong {
   font-size: 45px;
-  position: relative;
-  top: 9px;
 }
 
 div.current-temp img {
   max-width: 100px;
+  padding-bottom: 30px;
 }
 
 span.unit {
   position: relative;
-  left: 162px;
-  bottom: 75px;
+  bottom: 10px;
   font-size: 25px;
 }
 
 .forecast-weekday {
-  padding-bottom: 10px;
+  position: relative;
+  bottom: 55px;
 }
 
 .forecast-weekday:hover {
-  color: #622dc5;
+  color: #8041f5;
 }
 
 .weather-forecast {
