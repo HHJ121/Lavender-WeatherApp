@@ -17,12 +17,11 @@
   <body>
     <div class="container">
       <div class="app-wrapper">
-      
-      <div class="weather-app">
-        <img src="image/lavender.jpg" alt="lavender"  id="lavender" />
-        <form id="search-form">
-          <div class="row">
-              <div class="col-8">
+        <div class="weather-app">
+          <img src="image/lavender.jpg" alt="lavender" id="lavender" />
+          <form id="search-form">
+            <div class="row">
+              <div class="col-6">
                 <input
                   type="search"
                   placeholder="Enter a city..."
@@ -30,50 +29,47 @@
                   autocomplete="off"
                   autofocus="on"
                 />
-                 <span class="col-4">
+              </div>
+              <span class="col-6">
                 <input
                   type="submit"
                   value="Search"
                   class="btn btn-primary w-20"
                 />
-                 </span>
-            </div>
-        </form>
-        <div id="overviewWeather">
-           <h1 id="cityName"></h1>
-           <ul class="weather-condition">
-             <li>
-               Last updated at: <span id="date"></span>, <span id="description"></span>
-             </li>
-             <li>
-               Humidity: <span id="humidity"></span> %
-             </li>
-             <li>
-               Wind: <span id="wind-speed"></span> KMPH
-             </li>
-           </ul>
-      </div>
-      <div id="weather-temp" class="current-temp">
-        <img src="" alt="" id="weather-icon" />
-        <span class="temperature">
-          <strong id="temp"></strong> <span class="unit">°C</span>
-            </span>
-        </span>
-      </div>
-    </div>
-            <div class="weather-forecast" id="forecast">
-              
-               
-            
+              </span>
+           
+          </form>
+          <div id="overviewWeather">
+            <h1 id="cityName"></h1>
+            <ul class="weather-condition">
+              <li>
+                Last updated at: <span id="date"></span>,
+                <span id="description"></span>
+              </li>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind-speed"></span> KMPH</li>
+            </ul>
           </div>
-    </div>
+          <div id="weather-temp" class="current-temp">
+            <img src="" alt="" id="weather-icon" />
+            <span class="temperature">
+              <strong id="temp"></strong> <span class="unit">°C</span>
+            </span>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
+     </div>
+
       <div class="coder">
         <a href="https://github.com/HHJ121/Lavender-WeatherApp" target="_blank"
           >Open-source code</a
         >
-        by Haw-Harn Jiang and hosted on <a href="https://keen-villani-ec2253.netlify.app/" target="_blank">Netlify</a>
+        by Haw-Harn Jiang and hosted on
+        <a href="https://keen-villani-ec2253.netlify.app/" target="_blank"
+          >Netlify</a
+        >
       </div>
-    </div>
+  
 
     <script src="src/index.js"></script>
   </body>
